@@ -5,23 +5,23 @@
 class Location
 {
 public:
-	Location(int latitude, int longtitude, std::string type, std::string subtype, std::string name, std::string street);
-	int getLatitude();
-	int getLongtitude();
+	Location(double latitude, double longitude, std::string type, std::string subtype, std::string name, std::string street);
+	double getLatitude();
+	double getLongitude();
 	std::string geyType();
 	std::string geySubtype();
 	std::string geyName();
 	std::string geyStreet();
-	void setLatitude(int latitude);
-	void setLongtitude(int longtitude);
+	void setLatitude(double latitude);
+	void setLongitude(double longitude);
 	void setType(std::string type);
 	void setSubtype(std::string subtype);
 	void setName(std::string name);
 	void setStreet(std::string street);
 
 private:
-	int latitude;
-	int longtitude;
+	double latitude;
+	double longitude;
 	std::string type;
 	std::string subtype;
 	std::string name;

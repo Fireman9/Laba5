@@ -1,23 +1,23 @@
 #include "Location.h"
 
-Location::Location(int latitude, int longtitude, std::string type, std::string subtype, std::string name, std::string street)
+Location::Location(double latitude, double longitude, std::string type, std::string subtype, std::string name, std::string street)
 {
 	this->latitude = latitude;
-	this->longtitude = longtitude;
+	this->longitude = longitude;
 	this->type = type;
 	this->subtype = subtype;
 	this->name = name;
 	this->street = street;
 }
 
-int Location::getLatitude()
+double Location::getLatitude()
 {
 	return this->latitude;
 }
 
-int Location::getLongtitude()
+double Location::getLongitude()
 {
-	return this->longtitude;
+	return this->longitude;
 }
 
 std::string Location::geyType()
@@ -40,14 +40,14 @@ std::string Location::geyStreet()
 	return this->street;
 }
 
-void Location::setLatitude(int latitude)
+void Location::setLatitude(double latitude)
 {
 	this->latitude = latitude;
 }
 
-void Location::setLongtitude(int longtitude)
+void Location::setLongitude(double longtitude)
 {
-	this->longtitude = longtitude;
+	this->longitude = longtitude;
 }
 
 void Location::setType(std::string type)

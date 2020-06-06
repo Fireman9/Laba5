@@ -1,49 +1,49 @@
 #include "Rect.h"
 
-Rect::Rect(int latitude, int longtitude, int height, int width)
+Rect::Rect(double latitude, double longitude, double height, double width)
 {
 	this->latitude = latitude;
-	this->longtitude = longtitude;
+	this->longitude = longitude;
 	this->height = height;
 	this->width = width;
 }
 
-int Rect::getLatitude()
+double Rect::getLatitude()
 {
 	return this->latitude;
 }
 
-int Rect::getLongtitude()
+double Rect::getLongitude()
 {
-	return this->longtitude;
+	return this->longitude;
 }
 
-int Rect::getHeight()
+double Rect::getHeight()
 {
 	return this->height;
 }
 
-int Rect::getWidth()
+double Rect::getWidth()
 {
 	return this->width;
 }
 
-void Rect::setLatitude(int latitude)
+void Rect::setLatitude(double latitude)
 {
 	this->latitude = latitude;
 }
 
-void Rect::setLongtitude(int longtitude)
+void Rect::setLongitude(double longitude)
 {
-	this->longtitude = longtitude;
+	this->longitude = longitude;
 }
 
-void Rect::setHeight(int height)
+void Rect::setHeight(double height)
 {
 	this->height = height;
 }
 
-void Rect::setWidth(int width)
+void Rect::setWidth(double width)
 {
 	this->width = width;
 }
