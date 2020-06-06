@@ -20,22 +20,22 @@ double Location::getLongitude()
 	return this->longitude;
 }
 
-std::string Location::geyType()
+std::string Location::getType()
 {
 	return this->type;
 }
 
-std::string Location::geySubtype()
+std::string Location::getSubtype()
 {
 	return this->subtype;
 }
 
-std::string Location::geyName()
+std::string Location::getName()
 {
 	return this->name;
 }
 
-std::string Location::geyStreet()
+std::string Location::getStreet()
 {
 	return this->street;
 }
