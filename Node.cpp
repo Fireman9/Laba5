@@ -1,5 +1,11 @@
 #include "Node.h"
 
+Node::Node(Rect* rect)
+{
+	this->rect = rect;
+	this->location = nullptr;
+}
+
 Node::Node(Rect* rect, Location* location)
 {
 	this->rect = rect;
