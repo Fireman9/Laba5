@@ -1,12 +1,13 @@
 #pragma once
 
 #include <string>
+using namespace std;
 
 class Location
 {
 public:
 	Location(double latitude, double longitude, std::string type, std::string subtype, std::string name, std::string street);
-	double getLatitude();
+	/*double getLatitude();
 	double getLongitude();
 	std::string getType();
 	std::string getSubtype();
@@ -17,9 +18,8 @@ public:
 	void setType(std::string type);
 	void setSubtype(std::string subtype);
 	void setName(std::string name);
-	void setStreet(std::string street);
+	void setStreet(std::string street);*/
 
-private:
 	double latitude;
 	double longitude;
 	std::string type;

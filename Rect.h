@@ -1,21 +1,34 @@
 #pragma once
 
-class Rect 
+#include <cmath>
+#include <vector>
+
+#include "Location.h"
+
+class Rect
 {
 public:
-	Rect(double latitude, double longitude, double height, double width);
+	Rect(Location&location1, Location&location2, Location&location3, Location&location4);
 	double getLatitude();
 	double getLongitude();
-	double getHeight();
-	double getWidth();
+	//double getHeight();
+	//double getWidth();
 	void setLatitude(double latitude);
 	void setLongitude(double longitude);
-	void setHeight(double height);
-	void setWidth(double width);
+	void addLocation(Location location);
+	void checkSituation(Location location);
+	void restrucher(Location location);
 
-private:
-	double latitude;
-	double longitude;
-	double height;
-	double width;
+	Location leftUp;
+	Location leftDown;
+	Location rightUp;
+	Location rightDown;
+	vector<Location> locations;
+
+
+	//void setHeight(double height);
+	//void setWidth(double width);
+
+	//double latitude;
+	//double longitude;
 };

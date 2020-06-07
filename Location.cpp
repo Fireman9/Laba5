@@ -10,7 +10,7 @@ Location::Location(double latitude, double longitude, std::string type, std::str
 	this->street = street;
 }
 
-double Location::getLatitude()
+/*double Location::getLatitude()
 {
 	return this->latitude;
 }
@@ -68,4 +68,4 @@ void Location::setName(std::string name)
 void Location::setStreet(std::string street)
 {
 	this->street = street;
-}
+}*/

@@ -17,19 +17,12 @@ void RTree::readFile(std::string fileName)
 			std::getline(in, subtype, ';');
 			std::getline(in, name, ';');
 			std::getline(in, street, ';');
-			this->root->addChild(new Node(new Rect(std::stod(latitude), std::stod(lontitude), 0, 0),
-				new Location(std::stod(latitude), std::stod(lontitude), type, subtype, name, street)));
+			 Location location = new Location(std::stod(latitude), std::stod(lontitude), type, subtype, name, street);
 			if (this->root == nullptr) {
-				this->root = new Node(new Rect(std::stod(latitude), std::stod(lontitude), 0, 0));
+				this->root = new Rect(location, location, location, location);
+				this->root.addLocation(location);
 			}
-			if (std::stod(latitude) < this->root->rect->getLatitude()) {
-				this->root->rect->setLatitude(std::stod(latitude));
-				// TODO
-			}
-			if (std::stod(lontitude) < this->root->rect->getLongitude()) {
-				this->root->rect->setLongitude(std::stod(lontitude));
-				// TODO
-			}
+			this->root.addLocation(location);
 		}
 		in.close();
 	}
@@ -53,6 +46,9 @@ double RTree::distance(double A1, double B1, double A2, double B2) {
 	return result;
 }
 
+<<<<<<< HEAD
+
+=======
 bool RTree::checkSituated(double A, double B, Rect rect) {
 	double latitude, longitude, leftDown, rightUp;
 	latitude = rect.getLatitude();
@@ -64,3 +60,4 @@ bool RTree::checkSituated(double A, double B, Rect rect) {
 	}
 	return false;
 }
+>>>>>>> 2ec92c9366cac863504016e193a04a916e7a15cf

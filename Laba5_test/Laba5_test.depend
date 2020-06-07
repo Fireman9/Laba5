@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1591562873 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.cpp
+	"Location.h"
+
+1591563934 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.h
+	<string>
+
+1591470700 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\main.cpp
+
+1591470700 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\node.cpp
+	"Node.h"
+
+1591470700 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\node.h
+	<vector>
+	"Rect.h"
+	"Location.h"
+
+1591564942 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rect.h
+	<cmath>
+	<vector>
+	"Location.h"
+
+1514144174 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\laba5_test\main.cpp
+	<iostream>
+
