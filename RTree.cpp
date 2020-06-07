@@ -56,3 +56,17 @@ result = 2*asin(squereRoot)*radius;
 
 return result;
 }
+
+bool RTree::checkSituated(double A, double B, Rect rect){
+double latitude,longitude, leftDown, rightUp;
+//A - latitude  , B - longitude
+latitude = rect.getLatitude();
+longitude = rect.getLongitude();
+leftDown = longitude + rect.getHeight();
+rightUp = latitude + rect.getWidth();
+
+if(A > latitude && A < rightUp && B > longitude && B < leftDown){
+       return true;
+}
+return false;
+}
