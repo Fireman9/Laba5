@@ -39,34 +39,28 @@ void RTree::readFile(std::string fileName)
 }
 
 
-double RTree::distance(double A1, double B1, double A2, double B2){
-double result, a1, b1, a2, b2, delta1, delta2;
-double radius = 6367444.65;//radius in meters
-//latitude and longitude in radians
-a1 = (A1*2*acos(0.0))/180;
-b1 = (B1*2*acos(0.0))/180;
-a2 = (A2*2*acos(0.0))/180;
-b2 = (B2*2*acos(0.0))/180;
-
-delta1 = a2 - a1;
-delta2 = b2 - b1;
-
-double squereRoot = sqrt(pow(sin(delta1/2), 2)+cos(a2)*cos(a1)*pow(sin(delta2/2), 2));
-result = 2*asin(squereRoot)*radius;
-
-return result;
+double RTree::distance(double A1, double B1, double A2, double B2) {
+	double result, a1, b1, a2, b2, delta1, delta2;
+	double radius = 6367444.65;
+	a1 = (A1 * 2 * acos(0.0)) / 180;
+	b1 = (B1 * 2 * acos(0.0)) / 180;
+	a2 = (A2 * 2 * acos(0.0)) / 180;
+	b2 = (B2 * 2 * acos(0.0)) / 180;
+	delta1 = a2 - a1;
+	delta2 = b2 - b1;
+	double squereRoot = sqrt(pow(sin(delta1 / 2), 2) + cos(a2) * cos(a1) * pow(sin(delta2 / 2), 2));
+	result = 2 * asin(squereRoot) * radius;
+	return result;
 }
 
-bool RTree::checkSituated(double A, double B, Rect rect){
-double latitude,longitude, leftDown, rightUp;
-//A - latitude  , B - longitude
-latitude = rect.getLatitude();
-longitude = rect.getLongitude();
-leftDown = longitude + rect.getHeight();
-rightUp = latitude + rect.getWidth();
-
-if(A > latitude && A < rightUp && B > longitude && B < leftDown){
-       return true;
-}
-return false;
+bool RTree::checkSituated(double A, double B, Rect rect) {
+	double latitude, longitude, leftDown, rightUp;
+	latitude = rect.getLatitude();
+	longitude = rect.getLongitude();
+	leftDown = longitude + rect.getHeight();
+	rightUp = latitude + rect.getWidth();
+	if (A > latitude && A < rightUp && B > longitude && B < leftDown) {
+		return true;
+	}
+	return false;
 }
