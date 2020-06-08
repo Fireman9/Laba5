@@ -57,7 +57,7 @@ void RTree::findPlace(double latitude, double longitude, double radius, Rect rec
         for (int i = 0; i < rect.locations.size(); i++) {
             if (rect.distance(latitude, longitude, rect.locations[i].latitude, rect.locations[i].longitude) < radius) {
                 cout << rect.locations[i].name << " " << rect.locations[i].type << " " << rect.locations[i].subtype << " "
-                    << rect.locations[i].street << " " << endl;
+                    << rect.locations[i].street << " " << rect.locations[i].latitude << " " << rect.locations[i].longitude << endl;
             }
         }
         if (!rect.children.empty()) {
