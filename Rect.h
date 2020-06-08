@@ -22,6 +22,7 @@ public:
 	vector<Location> locations;
 
 
+
 	//void setHeight(double height);
 	//void setWidth(double width);
 

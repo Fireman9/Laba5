@@ -4,8 +4,9 @@
 #include <iostream>
 #include <cmath>
 
-#include "Node.h"
+//#include "Node.h"
 #include "Location.h"
+#include "Rect.h"
 
 class RTree
 {

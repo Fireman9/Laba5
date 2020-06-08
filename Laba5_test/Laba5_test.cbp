@@ -41,7 +41,6 @@
 		<Unit filename="../Rect.cpp" />
 		<Unit filename="../Rect.h" />
 		<Unit filename="../main.cpp" />
-		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

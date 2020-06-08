@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1591572958 source:c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\location.cpp
+	"Location.h"
+
+1591573010 c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\location.h
+	<string>
+
+1591579302 source:c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\main.cpp
+	"RTree.h"
+
+1591572958 c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\rtree.cpp
+	"RTree.h"
+	"Location.cpp"
+	"Rect.cpp"
+
+1591579846 c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\rtree.h
+	<fstream>
+	<iostream>
+	<cmath>
+	"Location.h"
+	"Rect.h"
+
+1591586197 c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\rect.h
+	<cmath>
+	<vector>
+	<iostream>
+	"Location.h"
+
+1591572958 c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\location.cpp
+	"Location.h"
+
+1591586902 c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\rect.cpp
+	"Rect.h"
+
+1591586616 source:c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\rect.cpp
+	"Rect.h"
+
+1591586830 source:c:\users\suprun\desktop\cursach\laba\5555555555555555555555555\rtree.cpp
+	"RTree.h"
+	"Rect.cpp"
+

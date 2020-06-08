@@ -2,10 +2,10 @@
 
 #include <vector>
 
-#include "Rect.h"
-#include "Location.h"
+//#include "Rect.h"
+//#include "Location.h"
 
-class Node
+/*class Node
 {
 public:
 	Rect* rect;
@@ -19,4 +19,4 @@ public:
 private:
 	std::vector<Node*> children;
 	Location* location;
-};
+};*/

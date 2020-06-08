@@ -1,26 +1,25 @@
 # depslib dependency file v1.0
-1591562873 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.cpp
+1591570080 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.cpp
 	"Location.h"
 
-1591563934 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.h
+1591572057 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.h
 	<string>
 
-1591470700 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\main.cpp
+1591571216 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\main.cpp
+	"RTree.h"
 
-1591470700 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\node.cpp
+1591571202 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\node.cpp
 	"Node.h"
 
-1591470700 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\node.h
+1591571187 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\node.h
 	<vector>
-	"Rect.h"
-	"Location.h"
 
-1591564942 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rect.h
+1591572057 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rect.h
 	<cmath>
 	<vector>
 	"Location.h"
 
-1514144174 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\laba5_test\main.cpp
+1591570080 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\laba5_test\main.cpp
 	<iostream>
 
 1591562873 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\laba5\location.cpp
@@ -46,4 +45,28 @@
 
 1514144174 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\laba5\laba5_test\main.cpp
 	<iostream>
+
+1591571063 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rtree.cpp
+	"RTree.h"
+
+1591571163 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rtree.h
+	<fstream>
+	<iostream>
+	<cmath>
+	"Location.h"
+	"Rect.h"
+
+1591571886 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rect.cpp
+	"Rect.h"
+
+1591571886 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rect.cpp
+	"Rect.h"
+
+1591571861 source:c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\rtree.cpp
+	"RTree.h"
+	"Location.h"
+	"Rect.cpp"
+
+1591570080 c:\users\suprun\desktop\youngpro\project\ПрогаЛаба5\laba5\location.cpp
+	"Location.h"
 

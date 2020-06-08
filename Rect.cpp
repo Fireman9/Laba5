@@ -1,7 +1,8 @@
-#include <cmath>
+
 
 #include "Rect.h"
-#include "Location.h"
+
+//#include "Location.h"
 
 Rect::Rect(Location leftDown, Location leftUp, Location rightDown, Location rightUp) : leftUp(leftUp),
                                                                                        rightDown(rightDown),

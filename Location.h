@@ -6,6 +6,7 @@ using namespace std;
 class Location
 {
 public:
+       Location();
     Location(double latitude, double longitude, std::string type, std::string subtype, std::string name, std::string street);
 	/*double getLatitude();
 	double getLongitude();

@@ -1,6 +1,6 @@
 #include "Node.h"
 
-Node::Node(Rect* rect)
+/*Node::Node(Rect* rect)
 {
 	this->rect = rect;
 	this->location = nullptr;
@@ -31,4 +31,4 @@ void Node::removeChildren()
 std::vector<Node*> Node::getChildren()
 {
 	return this->children;
-}
+}*/

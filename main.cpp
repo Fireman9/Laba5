@@ -1,4 +1,4 @@
-#include "RTree.cpp"
+#include "RTree.h"
 
 
 int main() {
