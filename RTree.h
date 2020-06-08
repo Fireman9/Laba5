@@ -16,7 +16,6 @@ public:
 	RTree();
 	void readFile(std::string fileName);
 	Rect* getRoot();
-
-private:
+	void findPlace(double latitude, double longitude, double radius, Rect rect);
 	Rect* root;
 };
