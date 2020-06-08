@@ -388,4 +388,8 @@ MigrationBackup/
 *.vcxproj
 *.vcxproj.filters
 
+*.cbp
+*.depend
+*.layout
+
 # End of https://www.gitignore.io/api/c++,visualstudio

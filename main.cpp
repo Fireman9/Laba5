@@ -2,9 +2,8 @@
 
 
 int main() {
- RTree tree;
+    RTree tree;
     tree.readFile("ukraine_poi.csv");
-    cout<<tree.getRoot()->leftUp.latitude<<endl;
-
-	return 0;
+    cout << tree.getRoot()->leftUp.latitude << endl;
+    return 0;
 }

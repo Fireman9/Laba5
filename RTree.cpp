@@ -1,71 +1,48 @@
 #include "RTree.h"
-#include "Location.cpp"
-#include "Rect.cpp"
 
 RTree::RTree() {
     this->root = nullptr;
 }
 
 void RTree::readFile(std::string fileName) {
-    std::ifstream in(fileName);
-    Location location(50, 50, "type", "subtype", "name", "street");
-    if (this->root == nullptr) {
-        this->root = new Rect(location, location, location, location);
+    ifstream in("ukraine_poi.csv");
+    if (in.is_open()) {
+        string latitude, lontitude, type, subtype, name, street;
+        while (!in.eof()) {
+            getline(in, latitude, ';');
+            if (latitude == "\n") {
+                break;
+            }
+            getline(in, lontitude, ';');
+            for (int i = 0; i < latitude.size(); i++) {
+                if (latitude[i] == ',') {
+                    latitude[i] = '.';
+                }
+            }
+            for (int i = 0; i < lontitude.size(); i++) {
+                if (lontitude[i] == ',') {
+                    lontitude[i] = '.';
+                }
+            }
+            getline(in, type, ';');
+            getline(in, subtype, ';');
+            getline(in, name, ';');
+            getline(in, street, ';');
+            Location location(stod(latitude), stod(lontitude), type, subtype, name, street);
+            if (this->root == nullptr) {
+                this->root = new Rect(location, location, location, location);
+                this->root->addLocation(location);
+            }
+            this->root->addLocation(location);
+        }
+        this->root->devideRoot();
+        in.close();
     }
-    this->root->addLocation(location);
-    Location location2(20,20,"","","","");
-    this->root->addLocation(location2);
-
-//    if (in.is_open()) {
-//        std::string latitude, lontitude, type, subtype, name, street;
-//        while (in.eof()) {
-//            std::getline(in, latitude, ';');
-//            std::getline(in, lontitude, ';');
-//            std::getline(in, type, ';');
-//            std::getline(in, subtype, ';');
-//            std::getline(in, name, ';');
-//            std::getline(in, street, ';');
-//            Location location(std::stod(latitude), std::stod(lontitude), type, subtype, name, street);
-//            if (this->root == nullptr) {
-//                this->root = new Rect(location, location, location, location);
-//                this->root->addLocation(location);
-//            }
-//            this->root->addLocation(location);
-//        }
-//        in.close();
-//    } else {
-//        std::cout << "File wasn't opened" << std::endl;
-//    }
+    else {
+        cout << "File wasn't opened" << endl;
+    }
 }
 
-
-double RTree::distance(double A1, double B1, double A2, double B2) {
-    double result, a1, b1, a2, b2, delta1, delta2;
-    double radius = 6367444.65;
-    a1 = (A1 * 2 * acos(0.0)) / 180;
-    b1 = (B1 * 2 * acos(0.0)) / 180;
-    a2 = (A2 * 2 * acos(0.0)) / 180;
-    b2 = (B2 * 2 * acos(0.0)) / 180;
-    delta1 = a2 - a1;
-    delta2 = b2 - b1;
-    double squereRoot = sqrt(pow(sin(delta1 / 2), 2) + cos(a2) * cos(a1) * pow(sin(delta2 / 2), 2));
-    result = 2 * asin(squereRoot) * radius;
-    return result;
-}
-
-Rect *RTree::getRoot() {
+Rect* RTree::getRoot() {
     return this->root;
 }
-
-
-//bool RTree::checkSituated(double A, double B, Rect rect) {
-//  double latitude, longitude, leftDown, rightUp;
-//  latitude = rect.getLatitude();
-//  longitude = rect.getLongitude();
-//  leftDown = longitude + rect.getHeight();
-//  rightUp = latitude + rect.getWidth();
-//  if (A > latitude && A < rightUp && B > longitude && B < leftDown) {
-//    return true;
-//  }
-//  return false;
-//}
