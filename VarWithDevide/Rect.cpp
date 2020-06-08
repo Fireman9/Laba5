@@ -39,15 +39,15 @@ double distance(double&A1, double&B1, double&A2, double&B2) {
 }
 void Rect::devideRoot(){
 if(this->locations.size() > 2){
-
+              cout<<11111111<<endl;
        double width = distance(this->leftUp.latitude, this->leftUp.longitude, this->rightUp.latitude, this->rightUp.longitude);
 double hight = distance(this->leftUp.latitude, this->leftUp.longitude, this->leftDown.latitude, this->leftDown.longitude);
 if(width > hight){
-       double halfWidth = abs(this->leftUp.latitude - this->rightUp.latitude)/2;
+       double halfWidth = this->leftUp.latitude + abs(this->leftUp.latitude - this->rightUp.latitude)/2;
        Location  up(halfWidth, this->leftUp.longitude, this->leftUp.type, this->leftUp.subtype, this->leftUp.name, this->leftUp.street);
        Location down(halfWidth, this->leftDown.longitude, this->leftUp.type, this->leftUp.subtype, this->leftUp.name, this->leftUp.street );
        Rect rectLeft( this->leftDown,this->leftUp, down, up);
-       Rect rectRight(down, up, this->rightUp, this->rightDown);
+       Rect rectRight(down, up, this->rightDown, this->rightUp);
         while(this->locations.size() > 0) {
 
             if(rectLeft.checkSituation(this->locations[this->locations.size()-1]))
@@ -61,11 +61,11 @@ if(width > hight){
         rectLeft.devideRoot();
         rectRight.devideRoot();
 }else{
-       double halfHight = abs(this->leftUp.longitude - this->leftDown.longitude)/2;
-       Location  left(halfHight, this->leftUp.latitude, this->leftUp.type, this->leftUp.subtype, this->leftUp.name, this->leftUp.street);
-       Location right(halfHight, this->rightUp.latitude, this->leftUp.type, this->leftUp.subtype, this->leftUp.name, this->leftUp.street );
+       double halfHight = this->leftDown.longitude + abs(this->leftUp.longitude - this->leftDown.longitude)/2;
+       Location  left(this->leftUp.latitude, halfHight,  this->leftUp.type, this->leftUp.subtype, this->leftUp.name, this->leftUp.street);
+       Location right(this->rightUp.latitude, halfHight, this->leftUp.type, this->leftUp.subtype, this->leftUp.name, this->leftUp.street );
        Rect rectUp( left, this->leftUp,right, this->rightUp);
-       Rect rectDown(this->leftUp, left,  this->rightUp, right);
+       Rect rectDown(this->leftDown, left,  this->rightDown, right);
        while(this->locations.size() > 0) {
             if(rectUp.checkSituation(this->locations[this->locations.size()-1]))
                 rectUp.addLocation(this->locations[this->locations.size()-1]);
